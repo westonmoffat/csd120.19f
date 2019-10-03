@@ -1,0 +1,17 @@
+@CHARSET "UTF-8";
+
+body { background-color: #e8ffff }
+
+h1 { color: #41b3a3 }
+
+h2 { color: #41b3a3 }
+
+a { color: #e27d60 }
+
+nav a { color: #e8a87c }
+
+.byline { color: rgba(71,24,66,0.5) }
+
+#page-copyright { color: #83c2c7 }
+
+#useful-links a { color: #c38d9e }
