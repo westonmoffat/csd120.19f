@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body { 
     background-color: #008080;
     font-family: 'Karla', sans-serif; 
@@ -54,16 +58,45 @@ ul {
     list-style-type: lower-roman;
 }
 
-header ul {
-    list-style-type: none;
+
+header {
+    border-top: 4px solid rgba(0,0,0,0.1);
+    margin-left: -2em;
+    margin-right: -2em;
 }
 
+
+header nav {
+    overflow: auto;  
+    margin-left: 2em;
+    margin-right: 2em;
+    border-bottom: 1px dotted rgba(0,0,0,0.3);
+    margin-top: -4px
+}
 
 header nav ul {
+    list-style-type: none;
     margin: 0;
     padding: 0;
+    float: right;
 }
 
+header nav ul li {
+    float: left;
+}
+
+header nav a {
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+    margin-left: 1em;
+    margin-right: 1em;
+    display: block;
+    border: 4px solid transparent;
+}
+
+header nav a:hover {
+    border-top: 4px solid #008080;
+}
 
 figure img {
     box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
@@ -91,6 +124,7 @@ footer hr {
 }
 
 .byline {
+    color: #001a11; 
     color: rgba(0,26,17,0.5);
     font-size: 70%; 
 }
@@ -113,4 +147,41 @@ footer hr {
     border-bottom: 1px solid rgba(0,0,0,0.3);
     background-color: #005580;
     box-shadow: 0 0 4px rgba(0,0,0,0.2);
+}
+
+
+.mugshot {
+    float: right;
+    position: relative;
+    top: -1em;
+}
+
+
+.paperclip {
+    background-image: url(../images/paperclip.png);
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    position: absolute;
+    top: -10px;
+    right: -7px;
+}
+
+.three-favourites {
+    clear: right;
+}
+
+.back-to-top {
+    text-align: right;
+    margin-right: -0.5em;
+    opacity: 0.5;
+}
+
+.back-to-top:hover {
+    opacity: 1;
+}
+
+.back-to-top a {
+    position: fixed;
+    bottom: 3.5em; 
 }
