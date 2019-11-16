@@ -3,10 +3,12 @@
 }
 
 body { 
+    display: flex; 
+    flex-wrap: wrap;
+    height: 100vh;
     background-color: #008080;
-    font-family: 'Karla', sans-serif; 
+    font-family: 'Karla', sans-serif;
 }
-
 
 h1 { 
     font-family: 'Spectral', serif;
@@ -34,23 +36,21 @@ h2 {
     color: transparent;
 }
 
-
 a { 
     color: #008080;
     text-decoration: none;
 }
-
 
 nav a { 
     color: #00e6e6;
 
 }
 
-
 footer {
     text-align: center;
     font-size: 12px;
     margin-bottom: 2em;
+    margin: auto;
 }
 
 
@@ -58,13 +58,11 @@ ul {
     list-style-type: lower-roman;
 }
 
-
 header {
     border-top: 4px solid rgba(0,0,0,0.1);
     margin-left: -2em;
     margin-right: -2em;
 }
-
 
 header nav {
     overflow: auto;  
@@ -78,11 +76,11 @@ header nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    float: right;
+    display: flex;
+    justify-content: center;
 }
 
 header nav ul li {
-    float: left;
 }
 
 header nav a {
@@ -102,7 +100,6 @@ figure img {
     box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
 }
 
-
 footer hr {
     width: 50vw;
     min-width: 300px;
@@ -116,7 +113,6 @@ footer hr {
     border-top-left-radius: 8px;
 }
 
-
 #page-copyright { 
     color: #000000;
     text-transform: uppercase;
@@ -129,13 +125,13 @@ footer hr {
     font-size: 70%; 
 }
 
-
 .bio p {
     text-indent: 3em;
 }
 
-
 .width-wrap {
+    display: flex;
+    flex-direction: column;
     margin-left: auto;
     margin-right: auto;
     max-width: 1024px;
@@ -149,13 +145,11 @@ footer hr {
     box-shadow: 0 0 4px rgba(0,0,0,0.2);
 }
 
-
 .mugshot {
     float: right;
     position: relative;
     top: -1em;
 }
-
 
 .paperclip {
     background-image: url(../images/paperclip.png);
@@ -184,4 +178,52 @@ footer hr {
 .back-to-top a {
     position: fixed;
     bottom: 3.5em; 
+}
+
+main {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 2em;
+}
+
+.bio {
+    grid-column-end: span 2;
+}
+
+.glossary {
+    grid-column-end: span 2;
+}
+
+#useful-links {
+    grid-column-end: span 2;
+}
+
+.gallery {
+    grid-column-end: span 2;
+    width: 100%
+}
+
+.gallery-thumbnails {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.gallery-thumbnails img {
+    width: 100%;
+    display: block;
+    filter: gray;
+    -webkit-filter: grayscale(1);
+}
+
+.gallery-thumbnails img:hover {
+    filter: none;
+    -webkit-filter: grayscale(0);
+}
+
+.row-span-2 {
+    grid-row-end: span 2;
+}
+
+.col-span-2 {
+    grid-column-end: span 2;
 }
