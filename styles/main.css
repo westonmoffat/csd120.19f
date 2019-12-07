@@ -240,15 +240,15 @@ img {
 
     .mugshot {
         float: none;
-        margin-left: none;
-        margin-right: none;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     main {
         display: block;
     }
     
-    .row-span-2 .col-span-2 {
+    .row-span-2.col-span-2 {
         grid-row-end: span 1;
         grid-column-end: span 1;
     }
