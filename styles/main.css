@@ -2,15 +2,15 @@
     box-sizing: border-box;
 }
 
-body { 
-    display: flex; 
+body {
+    display: flex;
     flex-wrap: wrap;
     height: 100vh;
     background-color: #008080;
     font-family: 'Karla', sans-serif;
 }
 
-h1 { 
+h1 {
     font-family: 'Spectral', serif;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
     background: rgb(34,193,195);
@@ -36,12 +36,12 @@ h2 {
     color: transparent;
 }
 
-a { 
+a {
     color: #008080;
     text-decoration: none;
 }
 
-nav a { 
+nav a {
     color: #00e6e6;
 }
 
@@ -64,7 +64,7 @@ header {
 }
 
 header nav {
-    overflow: auto;  
+    overflow: auto;
     margin-left: 2em;
     margin-right: 2em;
     border-bottom: 1px dotted rgba(0,0,0,0.3);
@@ -109,16 +109,16 @@ footer hr {
     border-top-left-radius: 8px;
 }
 
-#page-copyright { 
+#page-copyright {
     color: #000000;
     text-transform: uppercase;
-    letter-spacing: 3px; 
+    letter-spacing: 3px;
 }
 
 .byline {
-    color: #001a11; 
+    color: #001a11;
     color: rgba(0,26,17,0.5);
-    font-size: 70%; 
+    font-size: 70%;
 }
 
 .bio p {
@@ -173,7 +173,7 @@ footer hr {
 
 .back-to-top a {
     position: fixed;
-    bottom: 3.5em; 
+    bottom: 3.5em;
 }
 
 main {
@@ -231,15 +231,12 @@ img {
 
 table {
     border-collapse: collapse;
-}
-
-table {
     display: inline-table;
 }
 
 table th, table td {
     background-color: rgba(0,0,0,0.05);
-    margin: 0.3em 1em;
+    padding: 0.3em 1em;
     border-left: 3px solid #005580;
     border-right: 3px solid #005580;
 }
@@ -301,7 +298,7 @@ table tr:nth-child(2), tr:nth-child(7) {
     main {
         display: block;
     }
-    
+
     .row-span-2.col-span-2 {
         grid-row-end: span 1;
         grid-column-end: span 1;
