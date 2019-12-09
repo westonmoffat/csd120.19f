@@ -9,6 +9,10 @@
 
   <link rel="stylesheet" href="styles/main.css">
 
+  <script type="text/javascript" src="js/baguetteBox.js"></script>
+
+  <link rel="stylesheet" href="styles/baguetteBox.css">
+
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -24,7 +28,8 @@
 <div class="width-wrap">
   <header id="top">
     <nav>
-      <div class="burger"></div>
+      <input type="checkbox" id="burger-toggle">
+      <label for="burger-toggle" class="burger"></label>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="links.html">Links</a></li>
@@ -86,6 +91,59 @@
       </p>
     </section>
 
+    <section>
+      <h2>My Sault College Courses</h2>
+      <table>
+        <tr>
+          <th id="term">Term</th>
+          <th id="code">Code</th>
+          <th id="course name">Cource Name</th>
+        </tr>
+        <tr>
+          <td class="odd" rowspan="5" headers="term">Fall 2019</td>
+          <td headers="code">CSD105</td>
+          <td headers="course name">Python</td>
+        </tr>
+        <tr>
+          <td headers="code">CSD120</td>
+          <td headers="course name">Introduction to Web</td>
+        </tr>
+        <tr>
+          <td headers="code">CSO104</td>
+          <td headers="course name">Intro OS/Lan Admin</td>
+        </tr>
+        <tr>
+          <td headers="code">MTH122</td>
+          <td headers="course name">Copmuter Math</td>
+        </tr>
+        <tr>
+          <td headers="code">TNY130</td>
+          <td headers="course name">Technology/Society</td>
+        </tr>
+        <tr>
+          <td rowspan="5" headers="term">Winter 2020</td>
+          <td headers="code">CSA103</td>
+          <td headers="course name">Business Applications I</td>
+        </tr>
+        <tr>
+          <td headers="code">CSD102</td>
+          <td headers="course name">Programming Using C++</td>
+        </tr>
+        <tr>
+          <td headers="code">CSD212</td>
+          <td headers="course name">Web Scripting Languages</td>
+        </tr>
+        <tr>
+          <td headers="code">CSO104</td>
+          <td headers="course name">Introduction to LINUX</td>
+        </tr>
+        <tr>
+          <td headers="code">CST104</td>
+          <td headers="course name">PC Hardware and Networking</td>
+        </tr>
+      </table>
+    </section>
+
     <section class="gallery">
       <h2>Photo Gallery</h2>
       <div class="gallery-thumbnails">
@@ -135,6 +193,45 @@
           <img src="https://picsum.photos/id/1050/300" alt="Placeholder Image"></a>
       </div>
     </section>
+
+    <section class="survey">
+      <h2>Survey</h2>
+      <form action="https://formspree.io/xeqovlqr" method="post">
+        <label for="name_field">What is your name?</label>
+        <input type="text" name="name_field" id="name_field" required="required">
+
+        <label for="email_field">What is your email?</label>
+        <input type="text" name="email_field" id="email_field" required="required">
+
+        <label for="best_integer">Which integer is best?</label>
+        <input type="number" name="best_integer" id="best_integer">
+
+        <label for="best_day">Which day is best?</label>
+        <input type="date" name="best_day" id="best_day">
+
+        <label for="best_bear">Which bear is best?</label>
+        <select name="best_bear" id="best_bear">
+          <option></option>
+          <option value="Black">Black</option>
+          <option value="Brown">Brown</option>
+          <option value="Care">Care</option>
+          <option value="Panda">Panda</option>
+          <option value="Polar">Polar</option>
+          <option value="Teddy">Teddy</option>
+        </select>
+
+        <label>Do you like radio buttons?</label>
+        <label><input type="radio" name="option" value="yes">Yes</label>
+        <label><input type="radio" name="option" value="no">No</label>
+        <label><input type="radio" name="option" value="?" checked>None of your business</label>
+
+        <label for="life_meaning">What is the meaning of life?</label>
+        <textarea name="life_meaning" id="life_meaning rows="10" placeholder="Enter the correct answer here"></textarea>
+
+        <button value="submit" type="submit">SEND</button>
+
+      </form>
+    </section>
   </main>
   <footer>
     <hr>
@@ -162,5 +259,12 @@
     <a href=#top>◤</a>
   </div>
 </div>
+
+<script>
+  baguetteBox.run('.gallery-thumbnails', { 
+    filter: /picsum\.photos\/id/i
+});
+</script>
+
 </body>
 </html>

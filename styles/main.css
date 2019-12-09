@@ -229,6 +229,60 @@ img {
     height: auto;
 }
 
+table {
+    border-collapse: collapse;
+}
+
+table {
+    display: inline-table;
+}
+
+table th, table td {
+    background-color: rgba(0,0,0,0.05);
+    margin: 0.3em 1em;
+    border-left: 3px solid #005580;
+    border-right: 3px solid #005580;
+}
+
+table th {
+    background-color: rgba(0,0,0,0.1);
+}
+
+table tr:nth-of-type(odd) td, .odd {
+    background-color: rgba(0,0,0,0.1);
+}
+
+table tr:nth-child(2), tr:nth-child(7) {
+    border-top: 3px solid #005580;
+}
+
+.survey {
+    grid-column-end: span 2;
+}
+
+.survey form {
+    display: grid;
+}
+
+.survey form label {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+.survey button {
+    margin-top: 1em;
+    justify-self: end;
+    font-size: 24px;
+    padding: 1em 2em;
+    border: 3px outset rgb(34,193,195);
+    color: #000;
+    background: #800080;
+}
+
+#burger-toggle {
+    display: none;
+}
+
 @media only screen and (max-width: 768px) {
     footer hr {
         display: none;
@@ -255,9 +309,14 @@ img {
 
     header nav ul {
         flex-direction: column;
-        padding-top: 1em;
-        padding-bottom: 1em;
+        margin-top: 1em;
+        margin-bottom: 1em;
         text-align: center;
+        height: 0;
+        overflow: hidden;
+        transition-property: height;
+        transition-duration: 500ms;
+        transition-timing-function: ease-in-out;
     }
 
     header nav a {
@@ -272,6 +331,9 @@ img {
     .burger, .burger::before, .burger::after {
         width: 40px;
         border-top: 5px solid #008080;
+        transition-property: opacity, transform;
+        transition-duration: 200ms, 200ms;
+        transition-timing-function: ease-in-out;
     }
 
     .burger::before, .burger::after {
@@ -294,5 +356,22 @@ img {
         margin: 1em auto 5px auto;
         cursor: pointer;
         position: relative;
+        display: block;
+    }
+
+    #burger-toggle:checked ~ ul {
+        height: 110px;
+    }
+
+    #burger-toggle:checked ~ .burger {
+        transform: translateX(-5px) translateY(10px) rotate(45deg);
+    }
+
+    #burger-toggle:checked ~ .burger::before {
+        opacity: 0;
+    }
+
+    #burger-toggle:checked ~ .burger::after {
+        transform: translateY(-20px) rotate(-90deg);
     }
 }
